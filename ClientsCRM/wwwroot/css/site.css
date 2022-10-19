@@ -1,0 +1,42 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+nav li {
+    transition: all 0.2s;
+}
+
+nav li:hover{
+    transform: scale(1.1);
+}
+
+table{
+}
+
+table thead{
+    background: #a2cbd4;
+    border-bottom: 1px solid;
+}
+table tbody tr:nth-of-type(odd){
+    background: #f1f3ff;
+}

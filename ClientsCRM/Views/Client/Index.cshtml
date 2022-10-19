@@ -1,0 +1,39 @@
+﻿@model List<Client>
+
+@{
+	ViewData["title"] = "Clients";
+}
+<h2>Clients</h2>
+
+<p>
+
+<a asp-action="Create">Add Cient</a>
+</p>
+<table class="container text-center">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Company</th>
+			<th>Email</th>
+			<th>Phone Number</th>
+			<th>Notes</th>				
+			<th>Opciones</th>				
+			<th></th>				
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var client in Model) {
+			<tr>
+				<td>@Html.DisplayFor((c) => client.ClientId)</td>
+				<td>@Html.DisplayFor((c) => client.Name)</td>
+				<td>@Html.DisplayFor((c) => client.Company)</td>
+				<td>@Html.DisplayFor((c) => client.Email)</td>
+				<td>@Html.DisplayFor((c) => client.PhoneNumber)</td>
+				<td>@Html.DisplayFor((c) => client.Notes)</td>	
+				<td><a href="#">Editar</a></td>
+				<td><a href="#">Borrar</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
